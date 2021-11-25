@@ -17,6 +17,7 @@
         } else if (random >= 0.5) {
             return `${firstInt} × ${secondInt}`;
         } else if (random >= 0.25) {
+            // return `firstInt ⋅ ${secondInt}`;
             return `${firstInt} <span class='multiplication-dot' aria-label='times'></span> ${secondInt}`;
         } else {
             return `${firstInt}(${secondInt})`;
@@ -124,25 +125,27 @@
     }
 
     .is-wrong {
-        background-color: #ce2727;
+        background-color: #d12424;
         color: white;
     }
 
     .on-streak {
-        background-color: #ce2727;
         transition: all 0.2s;
     }
 
     h1 {
         display: flex;
         align-items: center;
+        font-size: clamp(2rem, 5vw, 4rem);
+        font-weight: 800;
     }
 
     h2 {
-        background-color: #2a4b7c;
+        background-color: #b62121;
         padding: 20px 30px;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         border-radius: 5px;
+        border: 4px solid #d12424;
     }
 
     main {
@@ -159,6 +162,6 @@
         border: none;
         padding: 20px;
         border-radius: 5px;
-        font-size: 18px;
+        font-size: clamp(1rem, 3vw, 2rem);
     }
 </style>
