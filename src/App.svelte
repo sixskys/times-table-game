@@ -76,6 +76,10 @@
         form.addEventListener('submit', (ev) => {
             ev.preventDefault();
 
+            if (input.value === '' || Number.isNaN(parseInt(input.value))) {
+                return;
+            }
+
             const isCorrect = parseInt(input.value) === currentAnswer;
 
             if (!attemptedProblem && isCorrect) {
